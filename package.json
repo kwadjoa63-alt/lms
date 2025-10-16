@@ -2,6 +2,10 @@
   "name": "kwadjo-learning-platform",
   "version": "0.2.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,12 +15,10 @@
     "create-admin": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/create-admin.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.8.0",
     "@hello-pangea/dnd": "^16.3.0",
     "@hookform/resolvers": "^3.3.1",
     "@mux/mux-node": "^7.3.1",
     "@mux/mux-player-react": "^1.14.2",
-    "@next/swc-win32-x64-msvc": "^15.5.3",
     "@prisma/client": "^5.3.0",
     "@radix-ui/react-alert-dialog": "^1.0.4",
     "@radix-ui/react-avatar": "^1.1.10",
@@ -42,7 +44,6 @@
     "cmdk": "^0.2.0",
     "eslint": "8.49.0",
     "eslint-config-next": "^14.0.0",
-    "faker": "^6.6.6",
     "lucide-react": "^0.276.0",
     "next": "^14.0.0",
     "next-auth": "^5.0.0-beta.29",
