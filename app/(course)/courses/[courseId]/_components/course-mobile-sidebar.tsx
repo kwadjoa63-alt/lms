@@ -13,6 +13,10 @@ interface CourseMobileSidebarProps {
   course: Course & {
     chapters: (Chapter & {
       userProgress: UserProgress[] | null;
+      quizzes: {
+        id: string;
+        isPublished: boolean;
+      }[];
     })[];
   };
   progressCount: number;

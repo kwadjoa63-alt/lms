@@ -72,7 +72,7 @@ export const getProgress = async (
       });
       
       // Get unique quiz IDs that have been passed
-      const passedQuizIds = [...new Set(completedQuizzes.map(q => q.quizId))];
+      const passedQuizIds = Array.from(new Set(completedQuizzes.map(q => q.quizId)));
       
       // Chapter is complete only if all quizzes are passed
       if (passedQuizIds.length === quizIds.length) {

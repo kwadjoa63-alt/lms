@@ -44,7 +44,7 @@ export async function GET(
       createdAt: attempt.createdAt.toISOString(),
       answers: attempt.answers.map((answer) => ({
         questionId: answer.questionId,
-        answer: answer.optionId,
+        answer: answer.answer,
         isCorrect: answer.isCorrect,
       })),
     }));

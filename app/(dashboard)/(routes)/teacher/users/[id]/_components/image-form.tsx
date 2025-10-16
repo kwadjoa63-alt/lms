@@ -6,14 +6,14 @@ import { Pencil, PlusCircle, ImageIcon, Upload } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { Profile } from "@prisma/client";
+import { User } from "@prisma/client";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
 
 interface ImageFormProps {
-  initialData: Profile
+  initialData: User
   id: string;
 };
 

@@ -102,7 +102,7 @@ export const CourseSidebar = async ({
             isCompleted={chapter.isFullyCompleted}
             courseId={course.id}
             isLocked={!chapter.isFree && !purchase}
-            hasQuizzes={chapter.hasQuizzes}
+            hasQuizzes={chapter.quizzes.length > 0}
           />
         ))}
       </div>

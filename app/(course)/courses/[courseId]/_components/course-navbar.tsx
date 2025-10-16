@@ -1,4 +1,4 @@
-import { Chapter, Course, UserProgress, Profile } from "@prisma/client"
+import { Chapter, Course, UserProgress, User } from "@prisma/client"
 
 import { NavbarRoutes } from "@/components/navbar-routes";
 
@@ -9,6 +9,10 @@ interface CourseNavbarProps {
   course: Course & {
     chapters: (Chapter & {
       userProgress: UserProgress[] | null;
+      quizzes: {
+        id: string;
+        isPublished: boolean;
+      }[];
     })[];
   };
   progressCount: number;

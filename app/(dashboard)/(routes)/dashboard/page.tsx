@@ -12,11 +12,18 @@ import { BannerCard } from "../(root)/_components/banner-card";
 export default async function DashboardPage() {
   const session = await auth();
   const userId = session?.user?.id;
-  const userRole = session?.user?.role;
 
   if (!userId) {
     redirect("/sign-in");
   }
+
+  // Get user with role from database
+  const user = await db.user.findUnique({
+    where: { id: userId },
+    select: { role: true }
+  });
+
+  const userRole = user?.role;
 
   // Get user's enrolled courses
   const {
